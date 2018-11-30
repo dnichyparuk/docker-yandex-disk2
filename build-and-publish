@@ -1,0 +1,2 @@
+docker build -t dnichyparuk/docker-yandex-disk2:latest .
+sudo docker push dnichyparuk/docker-yandex-disk2:latest
