@@ -1,0 +1,12 @@
+version: '3'
+services:
+    yandex-disk:
+        image: dnichyparuk/docker-yandex-disk2
+        container_name: yandex-disk
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /media/nas/yandex_disk:/root/yandex_disk
+        restart: always
+        environment:
+            - YANDEX_USER=xxx
+            - YANDEX_PASSWORD=yyy

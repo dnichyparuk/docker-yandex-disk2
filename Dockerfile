@@ -4,7 +4,7 @@ MAINTAINER Dzmitry Nichyparuk
 
 RUN apt-get update \
 
-    && apt-get install -y gnupg wget \
+    && apt-get install -y gnupg2 wget \
 
     && echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | tee -a /etc/apt/sources.list.d/yandex.list > /dev/null \
     && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | apt-key add - \
@@ -15,7 +15,7 @@ RUN apt-get update \
     && apt-get purge -y \
     && apt-get autoremove -y \
     && rm -r /var/lib/apt/lists/* \
-	&& mkdir /yandex_disk
+    && mkdir /root/yandex_disk
 
 # Copy start script
 COPY start.sh /
