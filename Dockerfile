@@ -15,6 +15,7 @@ RUN apt-get update \
     && apt-get purge -y \
     && apt-get autoremove -y \
     && rm -r /var/lib/apt/lists/* \
+	&& mkdir /yandex_disk
 
 # Copy start script
 COPY start.sh /
