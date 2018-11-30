@@ -11,4 +11,4 @@ echo "Password is $YANDEX_PASSWORD"
 yandex-disk token --password $YANDEX_PASSWORD $YANDEX_USER
 
 # Run service
-yandex-disk start --dir /yandex_disk -D
+yandex-disk start --dir /root/yandex_disk -D
