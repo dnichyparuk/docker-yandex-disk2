@@ -4,11 +4,10 @@ export YANDEX_USER
 export YANDEX_PASSWORD
 export YANDEX_FOLDER
 
-echo "User is $YANDEX_USER"
-echo "Password is $YANDEX_PASSWORD"
-
+echo "Generating token"
 # Generate token
 yandex-disk token --password $YANDEX_PASSWORD $YANDEX_USER
 
+echo "Starting yandex-disk"
 # Run service
 yandex-disk start --dir /root/yandex_disk -D
