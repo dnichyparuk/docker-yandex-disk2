@@ -8,7 +8,6 @@ echo "Generating token"
 # Generate token
 yandex-disk token --password $YANDEX_PASSWORD $YANDEX_USER
 
-
 echo "Starting yandex-disk"
 # Run service
 yandex-disk start --dir /root/yandex_disk -D
