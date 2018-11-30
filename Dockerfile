@@ -18,7 +18,9 @@ RUN apt-get update \
     && mkdir /root/yandex_disk
 
 # Copy start script
+COPY status.sh /
 COPY start.sh /
+RUN chmod +x /status.sh /
 RUN chmod +x /start.sh
 
 CMD ["/start.sh"]
